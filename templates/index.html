@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+    <head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Business Consulting HTML Template">
+        <!-- ======== Page title ============ -->
+        <title>车市脉搏</title>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/Fav-icon.png') }}">
+        <!-- Bootstrap min.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <!-- All Min Css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+        <!-- Magnific Popup.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+        <!-- MeanMenu.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/meanmenu.css') }}">
+        <!-- Swiper Bundle.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
+        <!-- Nice Select.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
+        <!-- Main.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+        <style>
+            body {
+                background-image:url("static/image/01.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <!-- Header Section Start -->
+         <header id="header-sticky" class="header-1">
+            <div class="container">
+                <div class="mega-menu-wrapper">
+                    <div class="header-main" style="background-color: transparent;">
+                        <div class="header-left">
+                            <div class="logo">
+                                <span style="font-size: 24px; font-weight: bold;">车市脉搏</span>
+                            </div>
+                        </div>
+                        <div class="header-right ">
+                            <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu" style="display: none;">
+                                        <ul>
+                                            <li>
+                                                <a href="{{ url_for('auth.index') }}">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="">销量预测</a>
+                                            </li>
+                                            <li>
+                                                <a href="">汽车详情</a>
+                                            </li>
+                                            <li>
+                                                <a href="">用户中心</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ url_for('auth.login_page') }}">登录</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ url_for('auth.register_page') }}">注册</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header__hamburger d-xl-none my-auto">
+                                <div class="sidebar__toggle">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+         <!--<< Hero Section Start >>-->
+         <section class="hero-section hero-1 fix">
+
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="hero-content">
+                            <h1 class="wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">数据洞察<br>
+                                &nbsp;&nbsp;&nbsp;销量领航 </h1>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+         </section>
+
+
+        <!-- All JS Plugins -->
+        <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+        <!-- Viewport Js -->
+        <script src="{{ url_for('static', filename='js/viewport.jquery.js') }}"></script>
+        <!-- Bootstrap Js -->
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <!-- Nice Select Js -->
+        <script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
+        <!-- Waypoints Js -->
+        <script src="{{ url_for('static', filename='js/jquery.waypoints.js') }}"></script>
+        <!-- Counterup Js -->
+        <script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}"></script>
+        <!-- Swiper Slider Js -->
+        <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
+        <!-- MeanMenu Js -->
+        <script src="{{ url_for('static', filename='js/jquery.meanmenu.min.js') }}"></script>
+        <!-- Magnific Popup Js -->
+        <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+        <!-- Wow Animation Js -->
+        <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+        <!-- Main.js -->
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    	
+</body>
+</html>

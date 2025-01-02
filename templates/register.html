@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+    <head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Business Consulting HTML Template">
+
+
+        <!-- ======== Page title ============ -->
+        <title>车市脉搏</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/Fav-icon.png') }}">
+        <!-- Bootstrap min.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <!-- All Min Css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+        <!-- Magnific Popup.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+        <!-- MeanMenu.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/meanmenu.css') }}">
+        <!-- Swiper Bundle.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
+        <!-- Nice Select.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
+        <!-- Main.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+
+
+        <!-- All JS Plugins -->
+        <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+        <!-- Viewport Js -->
+        <script src="{{ url_for('static', filename='js/viewport.jquery.js') }}"></script>
+        <!-- Bootstrap Js -->
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <!-- Nice Select Js -->
+        <script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
+        <!-- Waypoints Js -->
+        <script src="{{ url_for('static', filename='js/jquery.waypoints.js') }}"></script>
+        <!-- Counterup Js -->
+        <script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}"></script>
+        <!-- Swiper Slider Js -->
+        <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
+        <!-- MeanMenu Js -->
+        <script src="{{ url_for('static', filename='js/jquery.meanmenu.min.js') }}"></script>
+        <!-- Magnific Popup Js -->
+        <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+        <!-- Wow Animation Js -->
+        <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+        <!-- Main.js -->
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+
+        <style>
+            body {
+                background-image:url("static/image/01.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                background-color: rgba(255,255,255,0.5);
+                border-radius: 10px;
+            }
+            .btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+            .form-group {
+                margin-bottom: 20px;
+            }
+            .card-title {
+                font-size: 1.5rem; /* 减小标题大小 */
+            }
+            .btn-block {
+                display: block;
+                width: auto;
+                margin: 0 auto; /* 使按钮居中 */
+            }
+            .form-control {
+                background-color: rgba(255, 255, 255, 0.5); /* 设置输入框背景透明度 */
+                border: 1px solid #ced4da; /* 增加边框以提高可见性 */
+            }
+            .input-group-append {
+                background-color: rgba(255, 255, 255, 0.5); /* 设置按钮组背景透明度 */
+            }
+            .btn-secondary {
+                background-color: rgba(0, 0, 0, 0.5); /* 设置次要按钮背景透明度 */
+                border: none;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <!-- Header Section Start -->
+         <header id="header-sticky" class="header-1">
+            <div class="container">
+                <div class="mega-menu-wrapper">
+                    <div class="header-main" style="background-color: transparent;">
+                        <div class="header-left">
+                            <div class="logo">
+                                <span style="font-size: 24px; font-weight: bold;">车市脉搏</span>
+                            </div>
+                        </div>
+                        <div class="header-right ">
+                            <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu" style="display: none;">
+                                        <ul>
+                                            <li>
+                                                <a href="{{ url_for('auth.index') }}">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="">销量预测</a>
+                                            </li>
+                                            <li>
+                                                <a href="">汽车详情</a>
+                                            </li>
+                                            <li>
+                                                <a href="">用户中心</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ url_for('auth.login_page') }}">登录</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ url_for('auth.register_page') }}">注册</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header__hamburger d-xl-none my-auto">
+                                <div class="sidebar__toggle">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+         <div class="container">
+             <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card mt-5">
+                        <div class="card-body">
+                            <h2 class="card-title text-center mb-4">用户注册</h2>
+                            <form method="POST">
+                                <!-- 用户名输入框 -->
+                                <div class="form-group">
+                                    <label for="username">用户名</label>
+                                    <input type="text" class="form-control" id="username"  name="username" placeholder="请输入用户名">
+                                </div>
+                                <!-- 邮箱输入框 -->
+                                <div class="form-group">
+                                    <label for="email">邮箱</label>
+                                    <input type="email" class="form-control" id="email"  name="email" placeholder="请输入邮箱">
+                                </div>
+
+                                <!-- 验证码输入框 -->
+                                <div class="form-group">
+                                    <label for="captcha">验证码</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="captcha" name="captcha" placeholder="请输入验证码">
+                                        <div class="input-group-append">
+                                            <button type="button" class="btn btn-secondary" id = "captcha-btn">发送验证码 <i class="fas fa-envelope"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 密码输入框 -->
+                                <div class="form-group">
+                                    <label for="password">密码</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
+                                </div>
+
+                                <!-- 确认密码输入框 -->
+                                <div class="form-group">
+                                    <label for="confirm_password">确认密码</label>
+                                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="请确认密码">
+                                </div>
+
+                                <!-- 注册按钮 -->
+                                <button type="submit" class="btn btn-primary btn-block">注册</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </body>
+</html>
