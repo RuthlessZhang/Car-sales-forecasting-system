@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, jsonify, url_for,session
+from flask import Blueprint, render_template, redirect, jsonify, url_for, session
 from exts import mail, db
 from flask_mail import Message
 from flask import request
@@ -7,7 +7,7 @@ import random
 from models import EmailCaptchaModel, UserModel
 from .forms import RegisterForm, LoginForm
 from werkzeug.security import generate_password_hash, check_password_hash
-
+from decorators import login_required
 bp = Blueprint("auth", __name__, url_prefix="/")
 
 
@@ -31,7 +31,7 @@ def login_page():
             user = UserModel.query.filter_by(email=email).first()
             if user and check_password_hash(user.password, password):
                 session['user_id'] = user.id
-                return redirect(url_for('car.forecast_page'))
+                return redirect(url_for('auth.index'))
 
             else:
                 print("密码或者邮箱错误!")
@@ -74,3 +74,15 @@ def captcha_mail():
     db.session.add(email_captcha)
     db.session.commit()
     return jsonify({"code": 200, "msg": "", "data": None})
+
+
+@bp.route("/user")
+@login_required
+def user_page():
+    return render_template("user.html")
+
+
+@bp.route("/logout")
+def logout_page():
+    session.clear()
+    return redirect(url_for("auth.index"))

@@ -102,51 +102,51 @@
 
         <!-- Header Section Start -->
          <header id="header-sticky" class="header-1">
-            <div class="container">
-                <div class="mega-menu-wrapper">
-                    <div class="header-main" style="background-color: transparent;">
-                        <div class="header-left">
-                            <div class="logo">
-                                <span style="font-size: 24px; font-weight: bold;">车市脉搏</span>
-                            </div>
-                        </div>
-                        <div class="header-right ">
-                            <div class="mean__menu-wrapper">
-                                <div class="main-menu">
-                                    <nav id="mobile-menu" style="display: none;">
-                                        <ul>
-                                            <li>
-                                                <a href="{{ url_for('auth.index') }}">首页</a>
-                                            </li>
-                                            <li>
-                                                <a href="">销量预测</a>
-                                            </li>
-                                            <li>
-                                                <a href="">汽车详情</a>
-                                            </li>
-                                            <li>
-                                                <a href="">用户中心</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ url_for('auth.login_page') }}">登录</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ url_for('auth.register_page') }}">注册</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
+                <div class="container">
+                    <div class="mega-menu-wrapper">
+                        <div class="header-main" style="background-color: transparent;">
+                            <div class="header-left">
+                                <div class="logo">
+                                    <span style="font-size: 24px; font-weight: bold;">车市脉搏</span>
                                 </div>
                             </div>
-                            <div class="header__hamburger d-xl-none my-auto">
-                                <div class="sidebar__toggle">
-                                    <i class="fas fa-bars"></i>
+                            <div class="header-right ">
+                                <div class="mean__menu-wrapper">
+                                    <div class="main-menu">
+                                        <nav id="mobile-menu" style="display: none;">
+                                            <ul>
+                                                <li>
+                                                    <a href="{{ url_for('auth.index') }}">首页</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ url_for('car.forecast_page') }}">销量预测</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ url_for('car.car_page') }}">汽车详情</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ url_for('auth.user_page') }}">用户中心</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ url_for('auth.login_page') }}">登录</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ url_for('auth.register_page') }}">注册</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="header__hamburger d-xl-none my-auto">
+                                    <div class="sidebar__toggle">
+                                        <i class="fas fa-bars"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
          <div class="container">
              <div class="row justify-content-center">
                 <div class="col-md-4">

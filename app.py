@@ -1,6 +1,5 @@
 from flask import Flask, session, g
-from flask import render_template
-from flask_mail import Mail
+
 
 import config
 from exts import db, mail
@@ -24,11 +23,17 @@ app.register_blueprint(car_bp)
 @app.before_request
 def my_before_request():
     user_id = session.get('user_id')
-    if user_id is None:
+    if user_id:
         user = UserModel.query.get(user_id)
         setattr(g, 'user', user)
     else:
         setattr(g, 'user', None)
+
+
+@app.context_processor
+def my_context_processor():
+    return {"user": g.user}
+
 
 
 if __name__ == '__main__':

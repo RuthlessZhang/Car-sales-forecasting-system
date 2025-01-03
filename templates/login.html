@@ -103,7 +103,7 @@
         </style>
 
     </head>
-    <body class="text-center">
+<body class="text-center">
 
         <!-- Header Section Start -->
          <header id="header-sticky" class="header-1">
@@ -124,13 +124,13 @@
                                                 <a href="{{ url_for('auth.index') }}">首页</a>
                                             </li>
                                             <li>
-                                                <a href="">销量预测</a>
+                                                <a href="{{ url_for('car.forecast_page') }}">销量预测</a>
                                             </li>
                                             <li>
-                                                <a href="">汽车详情</a>
+                                                <a href="{{ url_for('car.car_page') }}">汽车详情</a>
                                             </li>
                                             <li>
-                                                <a href="">用户中心</a>
+                                                <a href="{{ url_for('auth.user_page') }}">用户中心</a>
                                             </li>
                                             <li>
                                                 <a href="{{ url_for('auth.login_page') }}">登录</a>
