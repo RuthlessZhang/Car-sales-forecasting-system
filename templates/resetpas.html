@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+    <head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Business Consulting HTML Template">
+        <!-- ======== Page title ============ -->
+        <title>Reset Password</title>
+
+                <!-- All JS Plugins -->
+        <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+        <!-- Viewport Js -->
+        <script src="{{ url_for('static', filename='js/viewport.jquery.js') }}"></script>
+        <!-- Bootstrap Js -->
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <!-- Nice Select Js -->
+        <script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
+        <!-- Waypoints Js -->
+        <script src="{{ url_for('static', filename='js/jquery.waypoints.js') }}"></script>
+        <!-- Counterup Js -->
+        <script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}"></script>
+        <!-- Swiper Slider Js -->
+        <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
+        <!-- MeanMenu Js -->
+        <script src="{{ url_for('static', filename='js/jquery.meanmenu.min.js') }}"></script>
+        <!-- Magnific Popup Js -->
+        <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+        <!-- Wow Animation Js -->
+        <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+        <!-- Main.js -->
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/Fav-icon.png') }}">
+        <!-- Bootstrap min.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <!-- All Min Css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+        <!-- Magnific Popup.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+        <!-- MeanMenu.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/meanmenu.css') }}">
+        <!-- Swiper Bundle.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
+        <!-- Nice Select.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
+        <!-- Main.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+
+    </head>
+<body class="container">
+    <div class="row justify-content-center">
+            <div class="col-md-6 mt-5">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0">忘记密码</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="email">邮箱地址</label>
+                                <input type="email" class="form-control" id="email" placeholder="请输入您的邮箱地址">
+                            </div>
+                            <button type="submit" class="btn btn-primary">重置密码</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

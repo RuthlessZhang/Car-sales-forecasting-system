@@ -32,3 +32,9 @@ class RegisterForm(wtforms.Form):
 class LoginForm(wtforms.Form):
     email = wtforms.StringField(validators=[Email(message="邮箱格式错误！")])
     password = wtforms.StringField(validators=[Length(min=6, max=20, message="密码格式错误！")])
+
+
+class AmendForm(wtforms.Form):
+    currentPassword = wtforms.StringField(validators=[Length(min=6, max=20, message="密码格式错误！")])
+    newPassword = wtforms.StringField(validators=[Length(min=6, max=20, message="密码格式错误！")])
+    confirmPassword = wtforms.StringField(validators=[EqualTo('newPassword')])

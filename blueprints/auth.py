@@ -1,13 +1,16 @@
-from flask import Blueprint, render_template, redirect, jsonify, url_for, session
+from flask import Blueprint, render_template, redirect, jsonify, url_for, session, g, flash
+from sqlalchemy.sql.functions import current_user
+
 from exts import mail, db
 from flask_mail import Message
 from flask import request
 import string
 import random
 from models import EmailCaptchaModel, UserModel
-from .forms import RegisterForm, LoginForm
+from .forms import RegisterForm, LoginForm, AmendForm
 from werkzeug.security import generate_password_hash, check_password_hash
 from decorators import login_required
+
 bp = Blueprint("auth", __name__, url_prefix="/")
 
 
@@ -76,13 +79,32 @@ def captcha_mail():
     return jsonify({"code": 200, "msg": "", "data": None})
 
 
-@bp.route("/user")
+@bp.route("/user", methods=["GET", "POST"])
 @login_required
 def user_page():
-    return render_template("user.html")
+    if request.method == "GET":
+        return render_template("user.html")
+    else:
+        form = AmendForm(request.form)
+        if form.validate():
+            currentPassword = form.currentPassword.data
+            newPassword = form.newPassword.data
+            email = g.user.email
+            user = UserModel.query.filter_by(email=email).first()
+            if user and check_password_hash(user.password, currentPassword):
+                hashed_new_password = generate_password_hash(newPassword)
+                user.password = hashed_new_password
+                db.session.commit()
+                print("密码更新成功！")
+                return redirect(url_for('auth.logout_page'))
+            else:
+                print("密码更新失败！")
+                return redirect(url_for('auth.user_page'))
 
 
 @bp.route("/logout")
 def logout_page():
     session.clear()
     return redirect(url_for("auth.index"))
+
+

@@ -31,7 +31,8 @@
         <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
         <!-- Main.js -->
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
+        <!-- Car.js -->
+        <script src="{{ url_for('static', filename='js/car.js') }}"></script>
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="{{ url_for('static', filename='img/Fav-icon.png') }}">
@@ -51,6 +52,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
         <!-- Main.css -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    
 </head>
 <body>
     <header id="header-sticky" class="header-1">
@@ -108,7 +110,28 @@
                     </div>
                 </div>
             </header>
-    <h1>这是汽车详情界面</h1>
+    <div class="container mt-5">
+    <!-- 搜索栏 -->
+    <div class="d-flex justify-content-center mb-3">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="input-group">
+                        <input type="text" id="carNameInput" class="form-control" placeholder="请输入汽车名称">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="search-btn">搜索</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 汽车列表 -->
+   <div class="row" id="carListContainer">
+        <!-- 汽车列表将在这里动态生成 -->
+   </div>
+</div>
 
 </body>
 </html>

@@ -51,6 +51,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
         <!-- Main.css -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
 </head>
 <body>
     <header id="header-sticky" class="header-1">
@@ -108,7 +109,39 @@
                     </div>
                 </div>
             </header>
-    <h1>这是用户中心界面</h1>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-9">
+                <h3 class="mb-3">个人信息</h3>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p class="card-title">用户名: <strong>{{ user.username }}</strong></p>
+                        <p class="card-text">邮箱: <strong>{{ user.email }}</strong></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">修改密码</h5>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="currentPassword">当前密码</label>
+                                <input type="password" class="form-control" id="currentPassword" name="currentPassword" placeholder="请输入当前密码">
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">新密码</label>
+                                <input type="password" class="form-control" id="newPassword" name="newPassword" placeholder="请输入新密码">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">确认新密码</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="请确认新密码">
+                            </div>
+                            <button type="submit" class="btn btn-primary">保存更改</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
