@@ -1,0 +1,22 @@
+/* 页面内容部分 */
+.content {
+    position: relative;
+    z-index: 1; /* 确保内容覆盖视频 */
+    background-color: white; /* 给内容一个背景色，以覆盖视频 */
+    margin-top: 80px; /* 给内容顶部添加间距，避免导航栏遮挡 */
+}
+
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1em;
+    color: #666;
+}

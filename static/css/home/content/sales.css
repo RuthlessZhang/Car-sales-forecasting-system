@@ -1,0 +1,86 @@
+/* 销量数据部分 */
+.container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.container h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.container p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.sales-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* 保证在小屏幕设备上也能正常显示 */
+    gap: 20px; /* 增加卡片之间的间距 */
+}
+
+.sales-data-item {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    text-align: center;
+    width: 250px; /* 卡片宽度 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.sales-data-item:hover {
+    transform: translateY(-10px); /* 鼠标悬停时的浮动效果 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sales-data-item h3 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #222;
+    margin: 10px 0;
+}
+
+.sales-data-item span {
+    font-size: 1.2em;
+    color: #777;
+}
+
+.sales-data-item p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* 添加底部的彩色装饰条 */
+.sales-data-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, #ff7f50, #f0a500, #00c1d4, #6a5acd);
+    border-radius: 0 0 15px 15px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .sales-data {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sales-data-item {
+        width: 90%; /* 在小屏幕上，卡片宽度调整为 90% */
+    }
+}

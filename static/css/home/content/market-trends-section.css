@@ -1,0 +1,97 @@
+/* 市场趋势模块样式 */
+.market-trends-section {
+    background-color: #F9F9F9;
+    margin: 5rem auto;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.market-trends-section .row {
+    display: flex;
+    flex-wrap: nowrap; /* 保证在小屏幕设备上也能正常显示 */
+    gap: 20px; /* 增加两列之间的间距 */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.market-trends-section h4 {
+    margin-bottom: 1rem;
+}
+
+.market-trends-section h4 span {
+    font-weight: 400;
+    color: #828282;
+    font-size: 0.85rem;
+}
+
+.market-trends-section article {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.market-trends-section .blockBlue {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #00c1d4;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.market-trends-section #clcikZhe img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.market-trends-section .pie-charts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 两列布局 */
+    gap: 20px; /* 图表之间的间距 */
+    justify-items: center; /* 图表水平居中 */
+    align-items: center; /* 图表垂直居中 */
+}
+
+.market-trends-section .pie-chart {
+    text-align: center;
+    width: 120px;
+}
+
+.market-trends-section .pie-chart .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #00c1d4 calc(var(--percentage) * 1%),
+        #f0f0f0 calc(var(--percentage) * 1%)
+    );
+    margin: 0 auto 10px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.market-trends-section .pie-chart span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 5px;
+}
+
+.market-trends-section .pie-chart p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .market-trends-section .row {
+        flex-direction: column; /* 小屏幕上模块垂直排列 */
+    }
+
+    .market-trends-section .pie-charts-container {
+        grid-template-columns: 1fr; /* 小屏幕改为单列布局 */
+    }
+}

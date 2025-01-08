@@ -1,0 +1,6 @@
+body {
+    margin: 0;
+    overflow-y: auto; /* 确保页面可以垂直滚动 */
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}

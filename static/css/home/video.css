@@ -1,0 +1,18 @@
+/* 视频背景样式 */
+#video-container {
+    position: relative;
+    width: 100vw; /* 宽度占满屏幕 */
+    height: 100vh; /* 视频背景占满一个屏幕高度 */
+    overflow: hidden;
+    z-index: -1; /* 确保视频在内容后面 */
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保视频按比例填充容器 */
+}
+
