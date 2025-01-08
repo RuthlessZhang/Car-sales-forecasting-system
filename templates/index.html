@@ -1,143 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--<< Header Area >>-->
-    <head>
-        <!-- ========== Meta Tags ========== -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Business Consulting HTML Template">
-        <!-- ======== Page title ============ -->
-        <title>车市脉搏</title>
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车市脉搏</title>
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="{{ url_for('static', filename='img/Fav-icon.png') }}">
-        <!-- Bootstrap min.css -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-        <!-- All Min Css -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
-        <!-- Animate.css -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
-        <!-- Magnific Popup.css -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
-        <!-- MeanMenu.css -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/meanmenu.css') }}">
-        <!-- Swiper Bundle.css -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
-        <!-- Nice Select.css -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
-        <!-- Main.css -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!-- 网页图标 -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='react.svg') }}"/>
+    <!-- Bootstrap min.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
-        <style>
-            body {
-                background-image:url("static/image/01.jpg");
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-            }
-        </style>
+     <!-- 基础样式 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <!-- 导航栏样式 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/header.css') }}">
+    <!-- 视频背景样式 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/video.css') }}">
+    <!-- 内容样式 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/content/market-trends-section.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/content/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/content/sales.css') }}">
+    <!-- 底部样式 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/footer.css') }}">
 
-    </head>
-    <body>
-
-        <!-- Header Section Start -->
-         <header id="header-sticky" class="header-1">
-                <div class="container">
-                    <div class="mega-menu-wrapper">
-                        <div class="header-main" style="background-color: transparent;">
-                            <div class="header-left">
-                                <div class="logo">
-                                    <span style="font-size: 24px; font-weight: bold;">车市脉搏</span>
-                                </div>
-                            </div>
-                            <div class="header-right ">
-                                <div class="mean__menu-wrapper">
-                                    <div class="main-menu">
-                                        <nav id="mobile-menu" style="display: none;">
-                                            <ul>
-                                                <li>
-                                                    <a href="{{ url_for('auth.index') }}">首页</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ url_for('car.forecast_page') }}">销量预测</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ url_for('car.car_page') }}">汽车详情</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ url_for('auth.user_page')}}">用户中心</a>
-                                                </li>
-                                                {% if user %}
-                                                    <li>
-                                                        <span>{{ user.username }}</span>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ url_for('auth.logout_page') }}">退出登录</a>
-                                                    </li>
-                                                {% else %}
-                                                    <li>
-                                                        <a href="{{ url_for('auth.login_page') }}">登录</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ url_for('auth.register_page') }}">注册</a>
-                                                    </li>
-                                                {% endif %}
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                                <div class="header__hamburger d-xl-none my-auto">
-                                    <div class="sidebar__toggle">
-                                        <i class="fas fa-bars"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-         <!--<< Hero Section Start >>-->
-         <section class="hero-section hero-1 fix">
-
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-lg-7">
-                        <div class="hero-content">
-                            <h1 class="wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">数据洞察<br>
-                                &nbsp;&nbsp;&nbsp;销量领航 </h1>
-                        </div>
-                    </div>
-
+    <style>
+    </style>
+</head>
+<body>
+<!-- 视频背景部分 -->
+<div id="video-container">
+    <video id="video" autoplay loop muted>
+        <source src="{{ url_for('static', filename='video/Homepage-Test_Drive-NA-Desktop.webm') }}" type="video/webm">
+    </video>
+</div>
+<!-- 美观的悬浮导航栏 -->
+<header>
+    <div class="logo">车市脉搏</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('auth.index') }}">首页</a></li>
+            <li><a href="{{ url_for('car_bp.forecast_page') }}">销量预测</a></li>
+            <li><a href="{{ url_for('car_bp.car_page') }}">汽车详情</a></li>
+            <li><a href="{{ url_for('auth.user_page') }}">用户中心</a></li>
+            {% if user %}
+                <li><span>{{ user.username }}</span></li>
+                <li><a href="{{ url_for('auth.logout_page') }}">退出登录</a></li>
+            {% else %}
+                <li><a href="{{ url_for('auth.login_page') }}">登录</a></li>
+                <li><a href="{{ url_for('auth.register_page') }}">注册</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+<!-- 页面内容部分 -->
+<div class="content">
+    <section class="section">
+        <h2>欢迎来到车市脉搏</h2>
+        <p>这里是汽车销量预测的前沿平台，助您洞察市场趋势。</p>
+    </section>
+    <div class="container">
+        <h2>最新汽车销量数据</h2>
+        <p>车市脉搏数据平台每月为您提供最新汽车销量数据、成交价数据，每月定时更新，数据来自车市脉搏大数据平台。</p>
+        <div class="sales-data">
+            <!-- 销量数据卡片 -->
+            <div class="sales-data-item">
+                <h3>240.9</h3>
+                <span>万辆</span>
+                <p>2024-11月汽车销量</p>
+            </div>
+            <div class="sales-data-item">
+                <h3>124.2</h3>
+                <span>万辆</span>
+                <p>2024-11月新能源汽车销量</p>
+            </div>
+            <div class="sales-data-item">
+                <h3>2,058.7</h3>
+                <span>万辆</span>
+                <p>2024年汽车累计销量</p>
+            </div>
+            <div class="sales-data-item">
+                <h3>948.1</h3>
+                <span>万辆</span>
+                <p>2024年新能源汽车累计销量</p>
+            </div>
+        </div>
+    </div>
+    <section class="market-trends-section">
+        <div class="row align-items-center">
+            <!-- 折线图部分 -->
+            <div class="col-md-6">
+                <h4 class="fontWeight1" style="margin-bottom: 1rem;">
+                    主要细分市场销量趋势
+                    <span style="font-weight: 400; color: #828282; font-size: 0.85rem;"> | 2023年12月 - 2024年11月</span>
+                </h4>
+                <article style="text-align: right; margin-bottom: 1rem;">
+                    <span class="blockBlue"></span>
+                    <span id="carType0">紧凑型SUV</span>
+                    <span class="blockBlue" style="background-color: #FFC80B;"></span>
+                    <span id="carType1">紧凑型轿车</span>
+                    <span class="blockBlue" style="background-color: #1BE8AD;"></span>
+                    <span id="carType2">中型SUV</span>
+                    <span class="blockBlue" style="background-color: #FF840B;"></span>
+                    <span id="carType3">中型轿车</span>
+                </article>
+                <div id="clcikZhe">
+                    <img src="{{ url_for('static', filename='image/line-chart-placeholder.png') }}"
+                         alt="销量趋势折线图"
+                         style="width: 100%; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
                 </div>
             </div>
-         </section>
+            <!-- 圆环图部分 -->
+            <div class="col-md-6">
+                <h4 class="fontWeight1" style="text-align: center; margin-bottom: 1rem;">
+                    市场份额
+                    <span style="font-weight: 400; color: #828282; font-size: 0.85rem;"> | 2024年05月</span>
+                </h4>
+                <p style="text-align: center; font-weight: 400; color: #828282; font-size: 0.9rem; margin-bottom: 2rem;">
+                    细分市场销量 / 整体市场销量</p>
+                <div class="pie-charts-container">
+                    <!-- 圆环图 1 -->
+                    <div class="pie-chart">
+                        <div class="circle" style="--percentage: 23.1;"></div>
+                        <span>23.1%</span>
+                        <p>紧凑型SUV</p>
+                    </div>
+                    <!-- 圆环图 2 -->
+                    <div class="pie-chart">
+                        <div class="circle" style="--percentage: 19.4;"></div>
+                        <span>19.4%</span>
+                        <p>紧凑型轿车</p>
+                    </div>
+                    <!-- 圆环图 3 -->
+                    <div class="pie-chart">
+                        <div class="circle"
+                             style="--percentage: 15.4; background: conic-gradient(#1BE8AD calc(var(--percentage) * 1%), #f0f0f0 calc(var(--percentage) * 1%));"></div>
+                        <span>15.4%</span>
+                        <p>中型SUV</p>
+                    </div>
+                    <!-- 圆环图 4 -->
+                    <div class="pie-chart">
+                        <div class="circle"
+                             style="--percentage: 12.5; background: conic-gradient(#FF840B calc(var(--percentage) * 1%), #f0f0f0 calc(var(--percentage) * 1%));"></div>
+                        <span>12.5%</span>
+                        <p>中型轿车</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <!-- 关于我们 -->
+                <div class="col-md-6 about-us">
+                    <h4>关于我们</h4>
+                    <p>
+                        我们致力于为您提供最精准的汽车销量预测和数据分析服务。通过大数据技术和专业算法，
+                        帮助汽车厂商、经销商和消费者洞察市场趋势，做出更明智的决策。
+                    </p>
+                    <ul>
+                        <li>精准的汽车销量预测</li>
+                        <li>全面的市场数据分析</li>
+                        <li>实时更新的行业动态</li>
+                        <li>支持个性化定制服务</li>
+                    </ul>
+                </div>
 
+                <!-- 联系我们 -->
+                <div class="col-md-6 contact-us">
+                    <h4>联系我们</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone-alt"></i> 客服热线：400-123-4567</p>
+                        <p><i class="fas fa-envelope"></i> 邮箱：<a href="mailto:support@carsales.com">support@carsales.com</a>
+                        </p>
+                        <p><i class="fas fa-map-marker-alt"></i> 办公地址：北京市朝阳区建国路88号SOHO大厦</p>
+                    </div>
+                    <div class="qr-code">
+                        <img src="{{ url_for('static', filename='image/qr-code.png') }}" alt="关注微信公众号">
+                        <p>关注微信公众号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
-        <!-- All JS Plugins -->
-        <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
-        <!-- Viewport Js -->
-        <script src="{{ url_for('static', filename='js/viewport.jquery.js') }}"></script>
-        <!-- Bootstrap Js -->
-        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-        <!-- Nice Select Js -->
-        <script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
-        <!-- Waypoints Js -->
-        <script src="{{ url_for('static', filename='js/jquery.waypoints.js') }}"></script>
-        <!-- Counterup Js -->
-        <script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}"></script>
-        <!-- Swiper Slider Js -->
-        <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
-        <!-- MeanMenu Js -->
-        <script src="{{ url_for('static', filename='js/jquery.meanmenu.min.js') }}"></script>
-        <!-- Magnific Popup Js -->
-        <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
-        <!-- Wow Animation Js -->
-        <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
-        <!-- Main.js -->
-        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    	
+<!-- JS 插件 -->
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector('header nav ul');
+        nav.classList.toggle('show');
+    }
+</script>
 </body>
 </html>
